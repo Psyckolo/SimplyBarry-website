@@ -26,7 +26,7 @@ export default function Hero() {
           muted
           loop
           playsInline
-          poster="/images/hero-garden.png" // Image de secours si la vidéo ne se charge pas
+          poster="/images/service-tonte.png" // Utilisation d'une image existante comme poster
         >
           <source
             src="https://res.cloudinary.com/dzh3r6r4a/video/upload/v1745861942/491929661_9337889642999470_4121538478128555865_n_xu1she.mp4"
