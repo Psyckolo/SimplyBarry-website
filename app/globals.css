@@ -131,6 +131,33 @@
   .testimonial-author {
     @apply text-right font-semibold mt-4 sm:mt-5 text-sm sm:text-base;
   }
+
+  /* Styles pour les animations du diaporama */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes fadeOut {
+    from {
+      opacity: 1;
+    }
+    to {
+      opacity: 0;
+    }
+  }
+
+  .fade-in {
+    animation: fadeIn 1s ease-in-out forwards;
+  }
+
+  .fade-out {
+    animation: fadeOut 1s ease-in-out forwards;
+  }
 }
 
 /* Responsive styles */
