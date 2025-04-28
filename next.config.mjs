@@ -10,6 +10,7 @@ const nextConfig = {
   },
   images: {
     unoptimized: true,
+    domains: ['res.cloudinary.com'], // Autoriser les images de Cloudinary
   },
   // Optimisation pour les fichiers statiques comme les vidéos
   staticPageGenerationTimeout: 120,
@@ -17,11 +18,15 @@ const nextConfig = {
   async headers() {
     return [
       {
-        source: '/videos/:path*',
+        source: '/:path*',
         headers: [
           {
-            key: 'Cache-Control',
-            value: 'public, max-age=31536000, immutable',
+            key: 'Cross-Origin-Opener-Policy',
+            value: 'same-origin',
+          },
+          {
+            key: 'Cross-Origin-Embedder-Policy',
+            value: 'require-corp',
           },
         ],
       },
