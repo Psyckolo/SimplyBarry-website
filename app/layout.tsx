@@ -37,6 +37,7 @@ export const metadata: Metadata = {
   icons: {
     icon: "/favicon.ico",
   },
+  viewport: "width=device-width, initial-scale=1, maximum-scale=5",
     generator: 'v0.dev'
 }
 
@@ -68,7 +69,7 @@ export default function RootLayout({
               },
               openingHours: "Mo-Fr 08:00-18:00",
               priceRange: "€€",
-              image: "https://www.simplybarry.be/images/logo.png",
+              image: "https://www.simplybarry.be/images/logo.jpg",
               sameAs: ["https://www.facebook.com/profile.php?id=61550934345100"],
             }),
           }}
@@ -76,7 +77,7 @@ export default function RootLayout({
       </head>
       <body className={openSans.className}>
         <Header />
-        <main className="pt-[90px]">{children}</main>
+        <main className="pt-[60px] sm:pt-[70px] md:pt-[80px]">{children}</main>
         <Footer />
       </body>
     </html>
