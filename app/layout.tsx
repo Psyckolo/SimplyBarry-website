@@ -49,6 +49,7 @@ export default function RootLayout({
   return (
     <html lang="fr" className={`${montserrat.variable} ${openSans.variable} ${playfairDisplay.variable}`}>
       <head>
+        {/* Nous retirons le préchargement de la vidéo car il peut causer des problèmes */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
