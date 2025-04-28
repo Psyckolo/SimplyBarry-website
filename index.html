@@ -1,0 +1,748 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simply Barry | Entretien de jardins professionnel en Belgique</title>
+    <meta name="description" content="Simply Barry, votre spécialiste de l'entretien de jardins en Belgique. Tonte, taille de haies, élagage et remise en état de vos espaces verts. Devis gratuit !">
+    
+    <!-- Schema.org pour LocalBusiness -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Simply Barry",
+      "description": "Entreprise d'entretien de jardins en Belgique proposant des services de tonte, taille de haies, élagage et remise en état d'espaces verts.",
+      "url": "https://www.simplybarry.be/",
+      "telephone": "+32470123456",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "15 Rue des Jardins",
+        "addressLocality": "Bruxelles",
+        "postalCode": "1000",
+        "addressCountry": "BE"
+      },
+      "openingHours": "Mo-Fr 08:00-18:00",
+      "priceRange": "€€",
+      "image": "https://www.simplybarry.be/images/logo.png",
+      "sameAs": ["https://www.facebook.com/profile.php?id=61550934345100"]
+    }
+    </script>
+    
+    <style>
+        /* Reset CSS */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        /* Variables */
+        :root {
+            --primary-color: #4CAF50;
+            --secondary-color: #388E3C;
+            --text-color: #333;
+            --light-text: #fff;
+            --background-light: #f5f5f5;
+            --background-dark: #333;
+            --border-radius: 5px;
+            --box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            --transition: all 0.3s ease;
+        }
+        
+        /* Base styles */
+        body {
+            font-family: 'Open Sans', sans-serif;
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Montserrat', sans-serif;
+            margin-bottom: 1rem;
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        h2 {
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+        
+        p {
+            margin-bottom: 1rem;
+        }
+        
+        a {
+            color: var(--primary-color);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+        
+        a:hover {
+            color: var(--secondary-color);
+        }
+        
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+        
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 12px 24px;
+            background-color: var(--primary-color);
+            color: var(--light-text);
+            border-radius: var(--border-radius);
+            text-align: center;
+            font-weight: 600;
+            transition: var(--transition);
+            border: none;
+            cursor: pointer;
+        }
+        
+        .btn:hover {
+            background-color: var(--secondary-color);
+            color: var(--light-text);
+            transform: translateY(-2px);
+        }
+        
+        .btn-secondary {
+            background-color: transparent;
+            border: 2px solid var(--light-text);
+        }
+        
+        .btn-secondary:hover {
+            background-color: var(--light-text);
+            color: var(--primary-color);
+        }
+        
+        .btn-outline {
+            background-color: transparent;
+            border: 2px solid var(--primary-color);
+            color: var(--primary-color);
+        }
+        
+        .btn-outline:hover {
+            background-color: var(--primary-color);
+            color: var(--light-text);
+        }
+        
+        .btn-large {
+            padding: 15px 30px;
+            font-size: 1.1rem;
+        }
+        
+        /* Header styles */
+        header {
+            background-color: white;
+            box-shadow: var(--box-shadow);
+            position: fixed;
+            width: 100%;
+            z-index: 1000;
+            top: 0;
+        }
+        
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 0;
+        }
+        
+        .logo img {
+            height: 60px;
+            width: auto;
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .nav-links li {
+            margin: 0 15px;
+        }
+        
+        .nav-links a {
+            color: var(--text-color);
+            font-weight: 600;
+        }
+        
+        .nav-links a:hover {
+            color: var(--primary-color);
+        }
+        
+        .cta-nav a {
+            color: var(--light-text);
+        }
+        
+        .phone-link {
+            color: var(--primary-color);
+            font-weight: 700;
+            font-size: 1.1rem;
+        }
+        
+        #menu-toggle {
+            display: none;
+        }
+        
+        /* Hero section */
+        .hero {
+            height: 80vh;
+            min-height: 600px;
+            background-image: url('/images/hero-garden.png');
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            display: flex;
+            align-items: center;
+            color: var(--light-text);
+            margin-top: 90px;
+        }
+        
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 800px;
+        }
+        
+        .hero-subtitle {
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+        }
+        
+        .hero-buttons {
+            display: flex;
+            gap: 15px;
+            margin-top: 30px;
+        }
+        
+        /* Advantages section */
+        .advantages {
+            padding: 80px 0;
+            background-color: var(--background-light);
+        }
+        
+        .advantages-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .advantage-card {
+            background-color: white;
+            padding: 30px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+            text-align: center;
+            transition: var(--transition);
+        }
+        
+        .advantage-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+        
+        .advantage-icon {
+            margin-bottom: 20px;
+        }
+        
+        .advantage-icon img {
+            width: 64px;
+            height: 64px;
+        }
+        
+        /* Services section */
+        .services {
+            padding: 80px 0;
+        }
+        
+        .services-slider {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .service-card {
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--box-shadow);
+            transition: var(--transition);
+        }
+        
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+        
+        .service-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        
+        .service-card h3, .service-card p {
+            padding: 0 20px;
+        }
+        
+        .service-card h3 {
+            margin-top: 20px;
+        }
+        
+        .service-card .btn {
+            margin: 20px;
+        }
+        
+        /* Testimonials section */
+        .testimonials {
+            padding: 80px 0;
+            background-color: var(--background-light);
+        }
+        
+        .testimonials-slider {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .testimonial-card {
+            background-color: white;
+            padding: 30px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+        }
+        
+        .testimonial-rating {
+            color: #FFD700;
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+        }
+        
+        .testimonial-text {
+            font-style: italic;
+            position: relative;
+            padding: 0 15px;
+        }
+        
+        .testimonial-text::before {
+            content: '"';
+            font-size: 3rem;
+            position: absolute;
+            left: -10px;
+            top: -20px;
+            color: rgba(0,0,0,0.1);
+        }
+        
+        .testimonial-author {
+            text-align: right;
+            font-weight: 600;
+            margin-top: 20px;
+        }
+        
+        /* CTA section */
+        .cta-section {
+            padding: 80px 0;
+            background-color: var(--primary-color);
+            color: var(--light-text);
+            text-align: center;
+        }
+        
+        .cta-section h2, .cta-section p {
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .quick-contact {
+            margin-top: 30px;
+        }
+        
+        .quick-contact a {
+            color: var(--light-text);
+            font-weight: 700;
+            text-decoration: underline;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: var(--background-dark);
+            color: var(--light-text);
+            padding: 60px 0 20px;
+        }
+        
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+        
+        .footer-about p {
+            margin-top: 15px;
+        }
+        
+        footer h4 {
+            margin-bottom: 20px;
+            font-size: 1.2rem;
+        }
+        
+        footer a {
+            color: var(--light-text);
+        }
+        
+        footer a:hover {
+            color: var(--primary-color);
+        }
+        
+        .footer-links ul {
+            list-style: none;
+        }
+        
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+        
+        .social-link {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 15px;
+        }
+        
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding-top: 20px;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+        
+        .legal-links {
+            display: flex;
+            gap: 20px;
+        }
+        
+        /* Responsive styles */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+            
+            h2 {
+                font-size: 1.8rem;
+            }
+            
+            .header-container {
+                flex-wrap: wrap;
+            }
+            
+            #menu-toggle {
+                display: block;
+                width: 30px;
+                height: 25px;
+                position: relative;
+                background: none;
+                border: none;
+                cursor: pointer;
+            }
+            
+            #menu-toggle span {
+                display: block;
+                width: 100%;
+                height: 3px;
+                background-color: var(--text-color);
+                margin: 5px 0;
+                transition: var(--transition);
+            }
+            
+            .nav-links {
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background-color: white;
+                flex-direction: column;
+                padding: 20px 0;
+                box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+                transform: translateY(-150%);
+                opacity: 0;
+                visibility: hidden;
+                transition: var(--transition);
+            }
+            
+            .nav-links.active {
+                transform: translateY(0);
+                opacity: 1;
+                visibility: visible;
+            }
+            
+            .nav-links li {
+                margin: 10px 0;
+                text-align: center;
+            }
+            
+            .hero {
+                height: 70vh;
+            }
+            
+            .hero-buttons {
+                flex-direction: column;
+            }
+            
+            .footer-bottom {
+                flex-direction: column;
+                text-align: center;
+                gap: 15px;
+            }
+            
+            .legal-links {
+                justify-content: center;
+            }
+        }
+    </style>
+    
+    <!-- Polices -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&family=Playfair+Display:ital@0;1&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="container header-container">
+            <a href="/" class="logo">
+                <img src="/images/logo.png" alt="Simply Barry Logo">
+            </a>
+            <nav id="main-nav">
+                <button id="menu-toggle" aria-label="Menu principal">
+                    <span></span><span></span><span></span>
+                </button>
+                <ul class="nav-links">
+                    <li><a href="/">Accueil</a></li>
+                    <li><a href="/services">Nos Services</a></li>
+                    <li><a href="/realisations">Réalisations</a></li>
+                    <li><a href="/a-propos">À propos</a></li>
+                    <li class="cta-nav"><a href="/devis" class="btn">Demander un devis</a></li>
+                </ul>
+            </nav>
+            <div class="contact-header">
+                <a href="tel:+32470123456" class="phone-link">+32 470 12 34 56</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Section Hero -->
+        <section class="hero">
+            <div class="hero-overlay"></div>
+            <div class="container hero-content">
+                <h1>Entretien professionnel de jardins en Belgique</h1>
+                <p class="hero-subtitle">Donnez vie à votre espace vert avec Simply Barry</p>
+                <div class="hero-buttons">
+                    <a href="/devis" class="btn btn-primary">Demander un devis gratuit</a>
+                    <a href="/services" class="btn btn-secondary">Découvrir nos services</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section Avantages -->
+        <section class="advantages">
+            <div class="container">
+                <h2>Pourquoi choisir Simply Barry pour l'entretien de votre jardin ?</h2>
+                <div class="advantages-grid">
+                    <div class="advantage-card">
+                        <div class="advantage-icon">
+                            <img src="/images/icon-expertise.png" alt="Icône expertise">
+                        </div>
+                        <h3>Expertise locale</h3>
+                        <p>Plus de 10 ans d'expérience en Belgique</p>
+                    </div>
+                    <div class="advantage-card">
+                        <div class="advantage-icon">
+                            <img src="/images/icon-quality.png" alt="Icône qualité">
+                        </div>
+                        <h3>Qualité garantie</h3>
+                        <p>Travail soigné et résultats durables</p>
+                    </div>
+                    <div class="advantage-card">
+                        <div class="advantage-icon">
+                            <img src="/images/icon-custom.png" alt="Icône personnalisation">
+                        </div>
+                        <h3>Service personnalisé</h3>
+                        <p>Solutions adaptées à vos besoins spécifiques</p>
+                    </div>
+                    <div class="advantage-card">
+                        <div class="advantage-icon">
+                            <img src="/images/icon-eco.png" alt="Icône éco-responsable">
+                        </div>
+                        <h3>Éco-responsable</h3>
+                        <p>Techniques respectueuses de l'environnement</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section Services -->
+        <section class="services">
+            <div class="container">
+                <h2>Nos services d'entretien de jardins</h2>
+                <div class="services-slider">
+                    <!-- Service 1 -->
+                    <div class="service-card">
+                        <img src="/images/service-tonte.png" alt="Tonte de pelouse">
+                        <h3>Tonte de pelouse</h3>
+                        <p>Une pelouse parfaitement entretenue pour valoriser votre jardin en Belgique</p>
+                        <a href="/services/tonte-pelouse" class="btn btn-outline">En savoir plus</a>
+                    </div>
+                    <!-- Service 2 -->
+                    <div class="service-card">
+                        <img src="/images/service-haies.png" alt="Taille de haies">
+                        <h3>Taille de haies</h3>
+                        <p>Des haies impeccables pour structurer votre jardin avec élégance</p>
+                        <a href="/services/taille-haies" class="btn btn-outline">En savoir plus</a>
+                    </div>
+                    <!-- Service 3 -->
+                    <div class="service-card">
+                        <img src="/images/service-elagage.png" alt="Élagage et abattage">
+                        <h3>Élagage et abattage</h3>
+                        <p>Entretien professionnel des arbres pour sécuriser votre espace extérieur</p>
+                        <a href="/services/elagage-abattage" class="btn btn-outline">En savoir plus</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section Témoignages -->
+        <section class="testimonials">
+            <div class="container">
+                <h2>Ce que nos clients en Belgique disent de nous</h2>
+                <div class="testimonials-slider">
+                    <!-- Témoignage 1 -->
+                    <div class="testimonial-card">
+                        <div class="testimonial-rating">★★★★★</div>
+                        <p class="testimonial-text">Simply Barry a complètement transformé mon jardin. Service professionnel et résultat impeccable.</p>
+                        <p class="testimonial-author">Marie D., Bruxelles</p>
+                    </div>
+                    <!-- Témoignage 2 -->
+                    <div class="testimonial-card">
+                        <div class="testimonial-rating">★★★★★</div>
+                        <p class="testimonial-text">Je recommande vivement cette entreprise pour la qualité du travail et le respect des délais. Très satisfait !</p>
+                        <p class="testimonial-author">Pierre L., Namur</p>
+                    </div>
+                    <!-- Témoignage 3 -->
+                    <div class="testimonial-card">
+                        <div class="testimonial-rating">★★★★★</div>
+                        <p class="testimonial-text">Équipe sérieuse et à l'écoute. Mes haies n'ont jamais été aussi belles depuis que Simply Barry s'en occupe.</p>
+                        <p class="testimonial-author">Sophie M., Liège</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section CTA finale -->
+        <section class="cta-section">
+            <div class="container">
+                <h2>Prêt à sublimer votre jardin en Belgique ?</h2>
+                <p>Contactez Simply Barry dès aujourd'hui pour un devis gratuit et sans engagement</p>
+                <a href="/devis" class="btn btn-large">Demander mon devis gratuit</a>
+                <div class="quick-contact">
+                    <p>Ou appelez-nous au <a href="tel:+32470123456">+32 470 12 34 56</a></p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-about">
+                    <img src="/images/logo.png" alt="Simply Barry Logo">
+                    <p>Votre spécialiste de l'entretien de jardins en Belgique</p>
+                </div>
+                <div class="footer-contact">
+                    <h4>Contactez-nous</h4>
+                    <p>Adresse: 15 Rue des Jardins, 1000 Bruxelles</p>
+                    <p>Téléphone: <a href="tel:+32470123456">+32 470 12 34 56</a></p>
+                    <p>Email: <a href="mailto:contact@simplybarry.be">contact@simplybarry.be</a></p>
+                </div>
+                <div class="footer-links">
+                    <h4>Liens rapides</h4>
+                    <ul>
+                        <li><a href="/">Accueil</a></li>
+                        <li><a href="/services">Services</a></li>
+                        <li><a href="/realisations">Réalisations</a></li>
+                        <li><a href="/devis">Devis</a></li>
+                        <li><a href="/a-propos">À propos</a></li>
+                    </ul>
+                </div>
+                <div class="footer-social">
+                    <h4>Suivez-nous</h4>
+                    <a href="https://www.facebook.com/profile.php?id=61550934345100" target="_blank" rel="noopener" class="social-link">
+                        <img src="/images/icon-facebook.png" alt="Facebook"> Facebook
+                    </a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Simply Barry. Tous droits réservés.</p>
+                <div class="legal-links">
+                    <a href="/mentions-legales">Mentions légales</a>
+                    <a href="/politique-confidentialite">Politique de confidentialité</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // JavaScript pour le menu mobile
+        document.addEventListener('DOMContentLoaded', function() {
+            const menuToggle = document.getElementById('menu-toggle');
+            const navLinks = document.querySelector('.nav-links');
+            
+            menuToggle.addEventListener('click', function() {
+                navLinks.classList.toggle('active');
+            });
+            
+            // Fermer le menu en cliquant sur un lien
+            const links = document.querySelectorAll('.nav-links a');
+            links.forEach(link => {
+                link.addEventListener('click', function() {
+                    navLinks.classList.remove('active');
+                });
+            });
+            
+            // Effet de scroll pour le header
+            window.addEventListener('scroll', function() {
+                const header = document.querySelector('header');
+                if (window.scrollY > 50) {
+                    header.style.boxShadow = '0 4px 10px rgba(0,0,0,0.1)';
+                } else {
+                    header.style.boxShadow = '0 2px 5px rgba(0,0,0,0.1)';
+                }
+            });
+        });
+    </script>
+</body>
+</html>
