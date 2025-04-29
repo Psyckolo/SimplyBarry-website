@@ -108,7 +108,7 @@ export default function HeroSection() {
           </a>
           <a
             href="#services"
-            className="btn bg-white hover:bg-gray-100 text-primary px-8 py-3 rounded-md text-lg font-semibold transition-all shadow-md border border-accent"
+            className="btn bg-primary hover:bg-secondary text-white px-8 py-3 rounded-md text-lg font-semibold transition-all shadow-md"
           >
             Découvrir nos services
           </a>
