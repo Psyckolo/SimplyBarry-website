@@ -18,7 +18,7 @@ const services = [
     title: "Taille de haies",
     description:
       "Nos experts en taille de haies vous garantissent des haies parfaitement entretenues qui structurent votre jardin avec élégance.",
-    image: "/images/service-haies.png",
+    image: "/images/service-haies-pro.jpeg",
     features: [
       "Taille de formation et d'entretien",
       "Respect des périodes de taille adaptées à chaque espèce",
@@ -27,15 +27,27 @@ const services = [
     ],
   },
   {
-    title: "Élagage et abattage",
+    title: "Élagage d'arbres",
     description:
-      "Nous proposons des services d'élagage et d'abattage d'arbres réalisés par des professionnels qualifiés, assurant la sécurité et la santé de vos espaces verts.",
+      "Nous proposons des services d'élagage d'arbres réalisés par des professionnels qualifiés, assurant la sécurité et la santé de vos espaces verts.",
     image: "/images/service-elagage.png",
     features: [
       "Élagage de sécurité et d'entretien",
-      "Abattage contrôlé",
-      "Dessouchage",
-      "Évacuation des branches et troncs",
+      "Taille d'éclaircissage",
+      "Remontée de couronne",
+      "Évacuation des branches",
+    ],
+  },
+  {
+    title: "Abattage d'arbres",
+    description:
+      "Notre équipe réalise des abattages d'arbres en toute sécurité, même dans les espaces restreints ou difficiles d'accès.",
+    image: "/images/service-abattage.jpeg",
+    features: [
+      "Abattage contrôlé et sécurisé",
+      "Démontage par sections",
+      "Dessouchage complet",
+      "Évacuation des déchets verts",
     ],
   },
 ]
@@ -61,6 +73,7 @@ export default function Services() {
                 fill
                 style={{ objectFit: "cover" }}
                 className="rounded"
+                priority={index === 1} // Ajouter la priorité pour la deuxième image (taille de haies)
               />
             </div>
             <div className="md:w-1/2">

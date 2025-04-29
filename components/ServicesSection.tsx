@@ -24,6 +24,7 @@ export default function ServicesSection() {
                   src={service.imageUrl || "/placeholder.svg"}
                   alt={service.title}
                   className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
+                  loading={index === 1 ? "eager" : "lazy"} // Charger en priorité l'image de taille de haies
                 />
               </div>
               <div className="p-6">

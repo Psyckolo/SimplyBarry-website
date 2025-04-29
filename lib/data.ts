@@ -11,8 +11,7 @@ export const services = [
     title: "Taille de haies",
     description:
       "Façonnage précis et esthétique de vos haies pour une apparence soignée et un développement sain. Nous respectons les périodes de nidification.",
-    imageUrl:
-      "https://images.unsplash.com/photo-1636559622519-c12b3c8fb5e9?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+    imageUrl: "/images/service-haies-pro.jpeg",
     icon: "fas fa-tree",
   },
   {
@@ -27,8 +26,7 @@ export const services = [
     title: "Abattage d'arbres",
     description:
       "Abattage sécurisé et contrôlé des arbres dangereux, malades ou indésirables. Évacuation des déchets incluse dans nos services.",
-    imageUrl:
-      "https://images.unsplash.com/photo-1470685983330-9b9752effbd4?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+    imageUrl: "/images/service-abattage.jpeg",
     icon: "fas fa-axe-battle",
   },
   {
