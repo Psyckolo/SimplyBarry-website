@@ -26,24 +26,16 @@ export default function Header() {
 
   return (
     <header
-      className={`bg-white fixed w-full z-10 top-0 transition-shadow duration-300 ${
-        scrolled ? "shadow-[0_4px_10px_rgba(0,0,0,0.1)]" : "shadow-custom"
-      }`}
+      className={`bg-white fixed w-full z-50 top-0 transition-all duration-300 ${scrolled ? "shadow-md py-2" : "py-4"}`}
     >
-      <div className="container flex flex-wrap justify-between items-center py-3 px-4 sm:px-6 lg:px-8">
+      <div className="container mx-auto px-4 flex flex-wrap justify-between items-center">
         <Link href="/" className="logo transition-transform duration-300 hover:scale-105 z-20">
-          <Image
-            src="/images/logo.jpg"
-            alt="Simply Barry Logo"
-            width={180}
-            height={180}
-            className="h-12 sm:h-14 md:h-16 w-auto"
-          />
+          <Image src="/logo.png" alt="Simply Barry" width={180} height={60} className="h-12 sm:h-14 md:h-16 w-auto" />
         </Link>
 
         {/* Bouton menu hamburger - visible uniquement sur mobile */}
         <button
-          className="block md:hidden z-20 p-2 focus:outline-none"
+          className="block lg:hidden z-20 p-2 focus:outline-none"
           onClick={() => setIsMenuOpen(!isMenuOpen)}
           aria-label="Menu principal"
         >
@@ -66,59 +58,72 @@ export default function Header() {
           </div>
         </button>
 
-        {/* Numéro de téléphone - caché sur mobile quand le menu est ouvert */}
-        <div className={`contact-header md:block ${isMenuOpen ? "hidden" : "block"}`}>
-          <a href="tel:+32470123456" className="text-primary font-bold text-base sm:text-lg">
-            +32 470 12 34 56
-          </a>
-        </div>
-
         {/* Navigation */}
-        <nav className={`w-full md:w-auto order-last md:order-none ${isMenuOpen ? "block" : "hidden md:block"}`}>
-          <ul className="flex flex-col md:flex-row items-center mt-4 md:mt-0 pb-4 md:pb-0">
-            <li className="py-2 md:py-0 md:px-4">
-              <Link
-                href="/"
-                className="text-textColor font-semibold hover:text-primary block text-center"
-                onClick={handleLinkClick}
-              >
-                Accueil
-              </Link>
-            </li>
-            <li className="py-2 md:py-0 md:px-4">
-              <Link
-                href="/services"
-                className="text-textColor font-semibold hover:text-primary block text-center"
-                onClick={handleLinkClick}
-              >
-                Nos Services
-              </Link>
-            </li>
-            <li className="py-2 md:py-0 md:px-4">
-              <Link
-                href="/realisations"
-                className="text-textColor font-semibold hover:text-primary block text-center"
-                onClick={handleLinkClick}
-              >
-                Réalisations
-              </Link>
-            </li>
-            <li className="py-2 md:py-0 md:px-4">
-              <Link
-                href="/a-propos"
+        <nav className={`w-full lg:w-auto order-last lg:order-none ${isMenuOpen ? "block" : "hidden lg:block"}`}>
+          <ul className="flex flex-col lg:flex-row items-center mt-4 lg:mt-0 pb-4 lg:pb-0">
+            <li className="py-2 lg:py-0 lg:px-4">
+              <a
+                href="#intro"
                 className="text-textColor font-semibold hover:text-primary block text-center"
                 onClick={handleLinkClick}
               >
                 À propos
-              </Link>
+              </a>
             </li>
-            <li className="py-2 md:py-0 md:px-4">
-              <Link href="/devis" className="btn w-full md:w-auto block text-center" onClick={handleLinkClick}>
-                Demander un devis
-              </Link>
+            <li className="py-2 lg:py-0 lg:px-4">
+              <a
+                href="#services"
+                className="text-textColor font-semibold hover:text-primary block text-center"
+                onClick={handleLinkClick}
+              >
+                Services
+              </a>
+            </li>
+            <li className="py-2 lg:py-0 lg:px-4">
+              <a
+                href="#testimonials"
+                className="text-textColor font-semibold hover:text-primary block text-center"
+                onClick={handleLinkClick}
+              >
+                Témoignages
+              </a>
+            </li>
+            <li className="py-2 lg:py-0 lg:px-4">
+              <a
+                href="#faq"
+                className="text-textColor font-semibold hover:text-primary block text-center"
+                onClick={handleLinkClick}
+              >
+                FAQ
+              </a>
+            </li>
+            <li className="py-2 lg:py-0 lg:px-4">
+              <a
+                href="#contact"
+                className="text-textColor font-semibold hover:text-primary block text-center"
+                onClick={handleLinkClick}
+              >
+                Contact
+              </a>
+            </li>
+            <li className="py-2 lg:py-0 lg:px-4">
+              <a
+                href="#contact"
+                className="btn bg-primary hover:bg-secondary text-white px-6 py-2 rounded-md transition-all"
+                onClick={handleLinkClick}
+              >
+                Devis gratuit
+              </a>
             </li>
           </ul>
         </nav>
+
+        {/* Numéro de téléphone - caché sur mobile quand le menu est ouvert */}
+        <div className={`contact-header lg:block ${isMenuOpen ? "hidden" : "block"}`}>
+          <a href="tel:+32XXXXXXXXX" className="text-primary font-bold text-base sm:text-lg">
+            +32 XX XX XX XX
+          </a>
+        </div>
       </div>
     </header>
   )

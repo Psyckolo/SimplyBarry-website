@@ -1,25 +1,25 @@
-import Link from "next/link"
-
 export default function CtaSection() {
   return (
-    <section className="py-12 sm:py-16 md:py-20 bg-primary text-white text-center">
-      <div className="container px-4 sm:px-6 lg:px-8">
-        <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mx-auto max-w-[700px] mb-4">
-          Prêt à sublimer votre jardin en Belgique ?
-        </h2>
-        <p className="mx-auto max-w-[700px] mb-6 sm:mb-8 text-sm sm:text-base">
-          Contactez Simply Barry dès aujourd'hui pour un devis gratuit et sans engagement
+    <section className="py-16 bg-primary text-white">
+      <div className="container mx-auto px-4 text-center">
+        <h2 className="font-heading text-3xl md:text-4xl font-bold mb-6">Prêt à transformer votre jardin ?</h2>
+        <p className="text-lg mb-8 max-w-2xl mx-auto">
+          Contactez Simply Barry dès aujourd'hui pour un devis gratuit et sans engagement. Nous vous répondrons dans les
+          24 heures.
         </p>
-        <Link href="/devis" className="btn btn-large inline-block">
-          Demander mon devis gratuit
-        </Link>
-        <div className="mt-6 sm:mt-8">
-          <p className="text-sm sm:text-base">
-            Ou appelez-nous au{" "}
-            <a href="tel:+32470123456" className="text-white font-bold underline">
-              +32 470 12 34 56
-            </a>
-          </p>
+        <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <a
+            href="#contact"
+            className="btn bg-white text-primary hover:bg-gray-100 px-8 py-3 rounded-md text-lg font-semibold transition-all"
+          >
+            Demander un devis
+          </a>
+          <a
+            href="tel:+32XXXXXXXXX"
+            className="btn bg-accent hover:bg-opacity-90 text-white px-8 py-3 rounded-md text-lg font-semibold transition-all"
+          >
+            <i className="fas fa-phone-alt mr-2"></i> Nous appeler
+          </a>
         </div>
       </div>
     </section>

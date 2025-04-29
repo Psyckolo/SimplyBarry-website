@@ -1,89 +1,137 @@
-import Link from "next/link"
 import Image from "next/image"
 
 export default function Footer() {
   return (
-    <footer className="bg-backgroundDark text-white pt-12 sm:pt-16 pb-5">
-      <div className="container px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-10 mb-8 sm:mb-10">
-          <div className="footer-about">
-            <Image
-              src="/images/logo.jpg"
-              alt="Simply Barry Logo"
-              width={150}
-              height={150}
-              className="h-20 sm:h-24 w-auto"
-            />
-            <p className="mt-4 text-sm sm:text-base">Votre spécialiste de l'entretien de jardins en Belgique</p>
-          </div>
-          <div className="footer-contact">
-            <h4 className="text-lg sm:text-xl font-semibold mb-4 sm:mb-5">Contactez-nous</h4>
-            <p className="text-sm sm:text-base mb-2">Adresse: 15 Rue des Jardins, 1000 Bruxelles</p>
-            <p className="text-sm sm:text-base mb-2">
-              Téléphone:{" "}
-              <a href="tel:+32470123456" className="hover:text-primary transition-colors">
-                +32 470 12 34 56
-              </a>
+    <footer className="bg-dark text-white py-12">
+      <div className="container mx-auto px-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
+          <div>
+            <div className="mb-4">
+              <Image src="/logo.png" alt="Simply Barry" width={180} height={60} className="h-14 w-auto" />
+            </div>
+            <p className="mb-4 text-gray-300">
+              Services professionnels d'entretien de jardin pour particuliers et entreprises en Belgique.
             </p>
-            <p className="text-sm sm:text-base">
-              Email:{" "}
-              <a href="mailto:contact@simplybarry.be" className="hover:text-primary transition-colors">
-                contact@simplybarry.be
+            <div className="flex space-x-4">
+              <a href="#" className="text-gray-300 hover:text-white transition-colors">
+                <i className="fab fa-facebook-f"></i>
               </a>
-            </p>
+              <a href="#" className="text-gray-300 hover:text-white transition-colors">
+                <i className="fab fa-instagram"></i>
+              </a>
+              <a href="#" className="text-gray-300 hover:text-white transition-colors">
+                <i className="fab fa-linkedin-in"></i>
+              </a>
+              <a href="#" className="text-gray-300 hover:text-white transition-colors">
+                <i className="fab fa-pinterest"></i>
+              </a>
+            </div>
           </div>
-          <div className="footer-links">
-            <h4 className="text-lg sm:text-xl font-semibold mb-4 sm:mb-5">Liens rapides</h4>
-            <ul className="list-none grid grid-cols-2 sm:block">
-              <li className="mb-2">
-                <Link href="/" className="text-sm sm:text-base hover:text-primary transition-colors">
-                  Accueil
-                </Link>
+
+          <div>
+            <h3 className="font-heading text-xl font-bold mb-4">Services</h3>
+            <ul className="space-y-2">
+              <li>
+                <a href="#services" className="text-gray-300 hover:text-white transition-colors">
+                  Tonte de pelouse
+                </a>
               </li>
-              <li className="mb-2">
-                <Link href="/services" className="text-sm sm:text-base hover:text-primary transition-colors">
-                  Services
-                </Link>
+              <li>
+                <a href="#services" className="text-gray-300 hover:text-white transition-colors">
+                  Taille de haies
+                </a>
               </li>
-              <li className="mb-2">
-                <Link href="/realisations" className="text-sm sm:text-base hover:text-primary transition-colors">
-                  Réalisations
-                </Link>
+              <li>
+                <a href="#services" className="text-gray-300 hover:text-white transition-colors">
+                  Élagage et abattage d'arbres
+                </a>
               </li>
-              <li className="mb-2">
-                <Link href="/devis" className="text-sm sm:text-base hover:text-primary transition-colors">
-                  Devis
-                </Link>
+              <li>
+                <a href="#services" className="text-gray-300 hover:text-white transition-colors">
+                  Entretien de parcs et jardins
+                </a>
               </li>
-              <li className="mb-2">
-                <Link href="/a-propos" className="text-sm sm:text-base hover:text-primary transition-colors">
-                  À propos
-                </Link>
+              <li>
+                <a href="#services" className="text-gray-300 hover:text-white transition-colors">
+                  Nettoyage de massifs
+                </a>
+              </li>
+              <li>
+                <a href="#services" className="text-gray-300 hover:text-white transition-colors">
+                  Remise en état de jardins
+                </a>
               </li>
             </ul>
           </div>
-          <div className="footer-social">
-            <h4 className="text-lg sm:text-xl font-semibold mb-4 sm:mb-5">Suivez-nous</h4>
-            <a
-              href="https://www.facebook.com/profile.php?id=61550934345100"
-              target="_blank"
-              rel="noreferrer noopener"
-              className="flex items-center gap-2.5 mb-4 hover:text-primary transition-colors"
-            >
-              <Image src="/images/icon-facebook.png" alt="Facebook" width={24} height={24} />
-              <span className="text-sm sm:text-base">Facebook</span>
-            </a>
+
+          <div>
+            <h3 className="font-heading text-xl font-bold mb-4">Liens utiles</h3>
+            <ul className="space-y-2">
+              <li>
+                <a href="#intro" className="text-gray-300 hover:text-white transition-colors">
+                  À propos de nous
+                </a>
+              </li>
+              <li>
+                <a href="#services" className="text-gray-300 hover:text-white transition-colors">
+                  Nos services
+                </a>
+              </li>
+              <li>
+                <a href="#testimonials" className="text-gray-300 hover:text-white transition-colors">
+                  Témoignages
+                </a>
+              </li>
+              <li>
+                <a href="#faq" className="text-gray-300 hover:text-white transition-colors">
+                  FAQ
+                </a>
+              </li>
+              <li>
+                <a href="#contact" className="text-gray-300 hover:text-white transition-colors">
+                  Contact
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 className="font-heading text-xl font-bold mb-4">Contact</h3>
+            <ul className="space-y-2">
+              <li className="flex items-start">
+                <i className="fas fa-map-marker-alt mt-1 mr-2 text-accent"></i>
+                <span className="text-gray-300">Belgique</span>
+              </li>
+              <li className="flex items-start">
+                <i className="fas fa-phone-alt mt-1 mr-2 text-accent"></i>
+                <span className="text-gray-300">+32 XX XX XX XX</span>
+              </li>
+              <li className="flex items-start">
+                <i className="fas fa-envelope mt-1 mr-2 text-accent"></i>
+                <span className="text-gray-300">contact@simplybarry.be</span>
+              </li>
+              <li className="flex items-start">
+                <i className="fas fa-clock mt-1 mr-2 text-accent"></i>
+                <span className="text-gray-300">Lun-Ven: 8h-18h, Sam: 9h-16h</span>
+              </li>
+            </ul>
           </div>
         </div>
-        <div className="border-t border-white border-opacity-10 pt-5 flex flex-col sm:flex-row justify-between items-center gap-4">
-          <p className="text-sm text-center sm:text-left">&copy; 2025 Simply Barry. Tous droits réservés.</p>
-          <div className="flex gap-4 sm:gap-5 text-sm">
-            <Link href="/mentions-legales" className="hover:text-primary transition-colors">
-              Mentions légales
-            </Link>
-            <Link href="/politique-confidentialite" className="hover:text-primary transition-colors">
+
+        <div className="pt-8 border-t border-gray-700 flex flex-col md:flex-row justify-between items-center">
+          <p className="text-gray-400 mb-4 md:mb-0">
+            &copy; {new Date().getFullYear()} Simply Barry. Tous droits réservés.
+          </p>
+          <div className="flex space-x-4">
+            <a href="#" className="text-gray-400 hover:text-white transition-colors">
               Politique de confidentialité
-            </Link>
+            </a>
+            <a href="#" className="text-gray-400 hover:text-white transition-colors">
+              Conditions d'utilisation
+            </a>
+            <a href="#" className="text-gray-400 hover:text-white transition-colors">
+              Mentions légales
+            </a>
           </div>
         </div>
       </div>

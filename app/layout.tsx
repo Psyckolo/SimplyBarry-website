@@ -1,30 +1,22 @@
 import type React from "react"
-import "./globals.css"
 import type { Metadata } from "next"
+import { Montserrat, Open_Sans } from "next/font/google"
+import "./globals.css"
 import Header from "@/components/Header"
 import Footer from "@/components/Footer"
-import { Montserrat, Open_Sans, Playfair_Display } from "next/font/google"
 
 // Configurer les polices
 const montserrat = Montserrat({
   subsets: ["latin"],
-  weight: ["400", "600", "700"],
+  weight: ["400", "500", "600", "700"],
   variable: "--font-montserrat",
   display: "swap",
 })
 
 const openSans = Open_Sans({
   subsets: ["latin"],
-  weight: ["400", "600"],
+  weight: ["400", "500", "600", "700"],
   variable: "--font-open-sans",
-  display: "swap",
-})
-
-const playfairDisplay = Playfair_Display({
-  subsets: ["latin"],
-  weight: ["400", "700"],
-  style: ["normal", "italic"],
-  variable: "--font-playfair",
   display: "swap",
 })
 
@@ -45,8 +37,9 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="fr" className={`${montserrat.variable} ${openSans.variable} ${playfairDisplay.variable}`}>
+    <html lang="fr" className={`${montserrat.variable} ${openSans.variable}`}>
       <head>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -73,9 +66,9 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body className={openSans.className}>
+      <body className={openSans.variable}>
         <Header />
-        <main className="pt-[60px] sm:pt-[70px] md:pt-[80px]">{children}</main>
+        <main>{children}</main>
         <Footer />
       </body>
     </html>
