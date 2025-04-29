@@ -3,8 +3,6 @@ import "./globals.css"
 import type { Metadata } from "next"
 import Header from "@/components/Header"
 import Footer from "@/components/Footer"
-
-// Ajouter ces imports pour les polices
 import { Montserrat, Open_Sans, Playfair_Display } from "next/font/google"
 
 // Configurer les polices
@@ -49,7 +47,6 @@ export default function RootLayout({
   return (
     <html lang="fr" className={`${montserrat.variable} ${openSans.variable} ${playfairDisplay.variable}`}>
       <head>
-        {/* Nous retirons le préchargement de la vidéo car il peut causer des problèmes */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{

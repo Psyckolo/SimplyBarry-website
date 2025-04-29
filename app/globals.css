@@ -1,4 +1,3 @@
-/* Les polices sont maintenant gérées via next/font/google dans layout.tsx */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -30,7 +29,8 @@
   h4,
   h5,
   h6 {
-    @apply font-montserrat mb-4 font-bold;
+    @apply font-bold mb-4;
+    font-family: var(--font-montserrat);
   }
 
   h1 {
@@ -63,7 +63,6 @@
 }
 
 @layer components {
-  /* Définition de la classe container sans utiliser @apply */
   .container {
     width: 100%;
     max-width: 1280px;
@@ -130,40 +129,5 @@
 
   .testimonial-author {
     @apply text-right font-semibold mt-4 sm:mt-5 text-sm sm:text-base;
-  }
-
-  /* Styles pour les animations du diaporama */
-  @keyframes fadeIn {
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 1;
-    }
-  }
-
-  @keyframes fadeOut {
-    from {
-      opacity: 1;
-    }
-    to {
-      opacity: 0;
-    }
-  }
-
-  .fade-in {
-    animation: fadeIn 1s ease-in-out forwards;
-  }
-
-  .fade-out {
-    animation: fadeOut 1s ease-in-out forwards;
-  }
-}
-
-/* Responsive styles */
-@media (max-width: 640px) {
-  .container {
-    padding-left: 1rem;
-    padding-right: 1rem;
   }
 }

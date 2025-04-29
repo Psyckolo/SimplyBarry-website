@@ -6,28 +6,19 @@ import Link from "next/link"
 export default function VideoHero() {
   const [videoError, setVideoError] = useState(false)
   const [isLoading, setIsLoading] = useState(true)
+
+  // URL Cloudinary
   const cloudinaryUrl =
     "https://res.cloudinary.com/dh52kmuhc/video/upload/v1745880132/4383263-hd_1920_1080_30fps_oqnvrd.mp4"
 
-  // Vérifier si l'URL Cloudinary est accessible
   useEffect(() => {
-    const checkVideoUrl = async () => {
-      try {
-        const response = await fetch(cloudinaryUrl, { method: "HEAD" })
-        if (!response.ok) {
-          console.error("La vidéo Cloudinary n'est pas accessible")
-          setVideoError(true)
-        }
-      } catch (error) {
-        console.error("Erreur lors de la vérification de l'URL vidéo:", error)
-        setVideoError(true)
-      } finally {
-        setIsLoading(false)
-      }
-    }
+    // Simuler un délai de chargement pour éviter les problèmes de timing
+    const timer = setTimeout(() => {
+      setIsLoading(false)
+    }, 1000)
 
-    checkVideoUrl()
-  }, [cloudinaryUrl])
+    return () => clearTimeout(timer)
+  }, [])
 
   return (
     <section className="hero h-[60vh] sm:h-[70vh] md:h-[80vh] min-h-[400px] sm:min-h-[500px] md:min-h-[600px] relative flex items-center text-white overflow-hidden">
@@ -39,8 +30,8 @@ export default function VideoHero() {
       )}
 
       {/* Vidéo en arrière-plan ou image de secours */}
-      {!videoError && !isLoading ? (
-        <div className="absolute inset-0 w-full h-full">
+      <div className="absolute inset-0 w-full h-full">
+        {!videoError && !isLoading && (
           <video
             autoPlay
             muted
@@ -48,17 +39,21 @@ export default function VideoHero() {
             playsInline
             className="absolute inset-0 w-full h-full object-cover"
             onError={() => setVideoError(true)}
+            crossOrigin="anonymous"
+            preload="auto"
           >
             <source src={cloudinaryUrl} type="video/mp4" />
-            Votre navigateur ne prend pas en charge la lecture de vidéos.
           </video>
-        </div>
-      ) : (
+        )}
+
+        {/* Image de secours (toujours présente, masquée si la vidéo est chargée) */}
         <div
-          className="absolute inset-0 w-full h-full bg-cover bg-center"
+          className={`absolute inset-0 w-full h-full bg-cover bg-center transition-opacity duration-500 ${
+            !videoError && !isLoading ? "opacity-0" : "opacity-100"
+          }`}
           style={{ backgroundImage: "url('/images/hero-garden.png')" }}
         />
-      )}
+      </div>
 
       {/* Overlay sombre pour améliorer la lisibilité du texte */}
       <div className="absolute inset-0 w-full h-full bg-black bg-opacity-50 z-1"></div>
