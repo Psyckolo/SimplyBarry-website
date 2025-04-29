@@ -16,7 +16,7 @@ export default function CtaSection() {
           </a>
           <a
             href="tel:+32XXXXXXXXX"
-            className="btn bg-accent hover:bg-opacity-90 text-dark-text px-8 py-3 rounded-md text-lg font-bold transition-all shadow-md"
+            className="btn bg-accent hover:bg-opacity-90 text-black px-8 py-3 rounded-md text-lg font-bold transition-all shadow-md"
           >
             <i className="fas fa-phone-alt mr-2"></i> Nous appeler
           </a>
