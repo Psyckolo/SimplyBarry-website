@@ -7,10 +7,6 @@ export default function VideoHero() {
   const [videoError, setVideoError] = useState(false)
   const [isLoading, setIsLoading] = useState(true)
 
-  // URL Cloudinary
-  const cloudinaryUrl =
-    "https://res.cloudinary.com/dh52kmuhc/video/upload/v1745880132/4383263-hd_1920_1080_30fps_oqnvrd.mp4"
-
   useEffect(() => {
     // Simuler un délai de chargement pour éviter les problèmes de timing
     const timer = setTimeout(() => {
@@ -39,10 +35,9 @@ export default function VideoHero() {
             playsInline
             className="absolute inset-0 w-full h-full object-cover"
             onError={() => setVideoError(true)}
-            crossOrigin="anonymous"
             preload="auto"
           >
-            <source src={cloudinaryUrl} type="video/mp4" />
+            <source src="/videos/garden-background.mp4" type="video/mp4" />
           </video>
         )}
 
