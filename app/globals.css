@@ -75,11 +75,11 @@
   }
 
   .btn-secondary {
-    @apply bg-accent text-dark-text font-bold;
+    @apply bg-accent text-darkText font-bold;
   }
 
   .btn-secondary:hover {
-    @apply bg-opacity-90 text-dark-text;
+    @apply bg-opacity-90 text-darkText;
   }
 
   .btn-outline {
@@ -97,7 +97,7 @@
 
   /* Ajouter une classe pour les textes sur fond clair */
   .text-on-light {
-    @apply text-dark-text font-semibold;
+    @apply text-darkText font-semibold;
   }
 
   /* Ajouter une ombre de texte pour améliorer la lisibilité sur les fonds complexes */
