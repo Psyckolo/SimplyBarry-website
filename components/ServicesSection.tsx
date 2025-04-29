@@ -5,8 +5,8 @@ export default function ServicesSection() {
     <section id="services" className="py-16 bg-gray-50">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="font-heading text-3xl md:text-4xl font-bold mb-4 text-primary">
-            Nos <span className="text-accent">services</span>
+          <h2 className="font-heading text-3xl md:text-4xl font-bold mb-4">
+            Nos <span className="bg-white px-3 py-1 rounded text-primary">services</span>
           </h2>
           <p className="text-lg max-w-2xl mx-auto">
             Des solutions professionnelles pour tous vos besoins d'entretien de jardin

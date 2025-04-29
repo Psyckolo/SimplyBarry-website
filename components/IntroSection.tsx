@@ -11,8 +11,9 @@ export default function IntroSection() {
             />
           </div>
           <div className="md:w-1/2 md:pl-12">
-            <h2 className="font-heading text-3xl md:text-4xl font-bold mb-6 text-primary text-left">
-              Entretien de jardin <span className="text-accent">simple et efficace</span>
+            <h2 className="font-heading text-3xl md:text-4xl font-bold mb-6 text-left">
+              Entretien de jardin{" "}
+              <span className="text-primary bg-white bg-opacity-80 px-2 py-1 rounded">simple et efficace</span>
             </h2>
             <p className="text-lg mb-6">
               Chez Simply Barry, nous croyons que l'entretien de jardin doit être simple. C'est pourquoi nous offrons
@@ -24,19 +25,19 @@ export default function IntroSection() {
             </p>
             <div className="grid grid-cols-2 gap-6">
               <div className="flex items-center">
-                <i className="fas fa-leaf text-accent text-xl mr-3"></i>
+                <i className="fas fa-leaf text-primary text-xl mr-3"></i>
                 <span className="font-medium">Approche écologique</span>
               </div>
               <div className="flex items-center">
-                <i className="fas fa-clock text-accent text-xl mr-3"></i>
+                <i className="fas fa-clock text-primary text-xl mr-3"></i>
                 <span className="font-medium">Service ponctuel</span>
               </div>
               <div className="flex items-center">
-                <i className="fas fa-certificate text-accent text-xl mr-3"></i>
+                <i className="fas fa-certificate text-primary text-xl mr-3"></i>
                 <span className="font-medium">Expert du jardin</span>
               </div>
               <div className="flex items-center">
-                <i className="fas fa-thumbs-up text-accent text-xl mr-3"></i>
+                <i className="fas fa-thumbs-up text-primary text-xl mr-3"></i>
                 <span className="font-medium">Satisfaction garantie</span>
               </div>
             </div>

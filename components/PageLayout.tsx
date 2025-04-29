@@ -16,7 +16,7 @@ export default function PageLayout({ children }: PageLayoutProps) {
       }}
     >
       <div className="container mx-auto px-4 py-8">
-        <div className="bg-white bg-opacity-95 rounded-lg shadow-lg p-6 md:p-8">{children}</div>
+        <div className="bg-white bg-opacity-98 rounded-lg shadow-lg p-6 md:p-8 border border-gray-200">{children}</div>
       </div>
     </div>
   )

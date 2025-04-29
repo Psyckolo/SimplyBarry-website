@@ -47,6 +47,7 @@ const config: Config = {
         },
         textColor: "#333",
         lightText: "#fff",
+        darkText: "#222",
         backgroundLight: "#f5f5f5",
         backgroundDark: "#333",
       },

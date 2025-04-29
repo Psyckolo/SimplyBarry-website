@@ -10,13 +10,13 @@ export default function CtaSection() {
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <a
             href="#contact"
-            className="btn bg-white text-primary hover:bg-gray-100 px-8 py-3 rounded-md text-lg font-semibold transition-all"
+            className="btn bg-white text-primary hover:bg-gray-100 px-8 py-3 rounded-md text-lg font-bold transition-all shadow-md border border-white"
           >
             Demander un devis
           </a>
           <a
             href="tel:+32XXXXXXXXX"
-            className="btn bg-accent hover:bg-opacity-90 text-white px-8 py-3 rounded-md text-lg font-semibold transition-all"
+            className="btn bg-accent hover:bg-opacity-90 text-dark-text px-8 py-3 rounded-md text-lg font-bold transition-all shadow-md"
           >
             <i className="fas fa-phone-alt mr-2"></i> Nous appeler
           </a>

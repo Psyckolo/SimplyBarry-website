@@ -15,7 +15,7 @@ export default function FaqSection() {
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="font-heading text-3xl md:text-4xl font-bold mb-4 text-primary">
-            Questions <span className="text-accent">fréquentes</span>
+            Questions <span className="bg-white px-3 py-1 rounded text-dark-text">fréquentes</span>
           </h2>
           <p className="text-lg max-w-2xl mx-auto">
             Trouvez les réponses à vos questions sur nos services d'entretien de jardin

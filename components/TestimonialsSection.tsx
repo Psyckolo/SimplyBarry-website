@@ -6,7 +6,7 @@ export default function TestimonialsSection() {
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="font-heading text-3xl md:text-4xl font-bold mb-4 text-primary">
-            Ce que disent nos <span className="text-accent">clients</span>
+            Ce que disent nos <span className="bg-gray-50 px-3 py-1 rounded text-dark-text">clients</span>
           </h2>
           <p className="text-lg max-w-2xl mx-auto">
             Découvrez les témoignages de nos clients satisfaits à travers la Belgique
