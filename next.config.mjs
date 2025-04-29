@@ -10,20 +10,7 @@ const nextConfig = {
   },
   images: {
     unoptimized: true,
-  },
-  // Configuration pour les en-têtes HTTP
-  async headers() {
-    return [
-      {
-        source: '/videos/:path*',
-        headers: [
-          {
-            key: 'Cache-Control',
-            value: 'public, max-age=31536000, immutable',
-          },
-        ],
-      },
-    ]
+    domains: ['www.youtube.com', 'i.ytimg.com', 'img.youtube.com'],
   },
 };
 
