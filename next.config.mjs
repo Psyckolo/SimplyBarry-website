@@ -10,7 +10,7 @@ const nextConfig = {
   },
   images: {
     unoptimized: true,
-    domains: ['www.youtube.com', 'i.ytimg.com', 'img.youtube.com'],
+    domains: ['res.cloudinary.com'],
   },
   async headers() {
     return [
@@ -19,7 +19,7 @@ const nextConfig = {
         headers: [
           {
             key: 'Content-Security-Policy',
-            value: "default-src 'self'; script-src 'self' 'unsafe-eval' 'unsafe-inline' https://www.youtube.com https://s.ytimg.com; frame-src https://www.youtube.com; img-src 'self' data: https://i.ytimg.com https://img.youtube.com; style-src 'self' 'unsafe-inline';"
+            value: "default-src 'self'; script-src 'self' 'unsafe-eval' 'unsafe-inline' https://unpkg.com; frame-src 'self' https://player.cloudinary.com; img-src 'self' data: https://res.cloudinary.com; media-src 'self' https://res.cloudinary.com; style-src 'self' 'unsafe-inline' https://unpkg.com;"
           }
         ],
       },

@@ -3,12 +3,17 @@
 import { useState, useEffect } from "react"
 import Link from "next/link"
 
-export default function YouTubeVideoBackground() {
+export default function CloudinaryIframeBackground() {
   const [isMounted, setIsMounted] = useState(false)
   const [isLoading, setIsLoading] = useState(true)
 
-  // ID de la vidéo YouTube partagée
-  const youtubeVideoId = "1KCRCED0uzE"
+  // Informations Cloudinary extraites de l'URL
+  const cloudName = "dh52kmuhc"
+  const publicId = "4383263-hd_1920_1080_30fps_cal7hw"
+
+  // URL directe pour référence
+  const directUrl =
+    "https://res.cloudinary.com/dh52kmuhc/video/upload/v1745889755/4383263-hd_1920_1080_30fps_cal7hw.mp4"
 
   useEffect(() => {
     setIsMounted(true)
@@ -21,6 +26,19 @@ export default function YouTubeVideoBackground() {
     return () => clearTimeout(timer)
   }, [])
 
+  // Diaporama de secours
+  const [currentImageIndex, setCurrentImageIndex] = useState(0)
+  const fallbackImages = ["/images/service-tonte.png", "/images/service-haies.png", "/images/service-elagage.png"]
+
+  useEffect(() => {
+    if (!isMounted) {
+      const interval = setInterval(() => {
+        setCurrentImageIndex((prevIndex) => (prevIndex + 1) % fallbackImages.length)
+      }, 5000)
+      return () => clearInterval(interval)
+    }
+  }, [isMounted, fallbackImages.length])
+
   return (
     <section className="hero h-[60vh] sm:h-[70vh] md:h-[80vh] min-h-[400px] sm:min-h-[500px] md:min-h-[600px] relative flex items-center text-white overflow-hidden">
       {/* Indicateur de chargement */}
@@ -30,30 +48,42 @@ export default function YouTubeVideoBackground() {
         </div>
       )}
 
-      {/* Arrière-plan : iframe YouTube ou image de secours */}
+      {/* Arrière-plan : iframe Cloudinary ou diaporama de secours */}
       <div className="absolute inset-0 w-full h-full">
-        {isMounted && (
+        {isMounted ? (
           <div className="absolute inset-0 w-full h-full pointer-events-none overflow-hidden">
             <iframe
-              src={`https://www.youtube.com/embed/${youtubeVideoId}?autoplay=1&mute=1&controls=0&showinfo=0&rel=0&loop=1&playlist=${youtubeVideoId}&modestbranding=1&iv_load_policy=3&disablekb=1&playsinline=1&enablejsapi=1`}
-              title="Arrière-plan vidéo"
-              frameBorder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
-              className="absolute w-[300%] h-[300%] top-[-100%] left-[-100%]"
-              style={{ pointerEvents: "none" }}
+              src={`https://player.cloudinary.com/embed/?cloud_name=${cloudName}&public_id=${publicId}&fluid=true&controls=false&autoplay=true&loop=true&muted=true&source_types%5B0%5D=mp4`}
+              allow="autoplay; fullscreen; encrypted-media; picture-in-picture"
+              className="absolute w-full h-full"
+              style={{ border: "none", pointerEvents: "none" }}
               onLoad={() => setIsLoading(false)}
             ></iframe>
           </div>
+        ) : (
+          <>
+            {fallbackImages.map((src, index) => (
+              <div
+                key={index}
+                className="absolute inset-0 w-full h-full transition-opacity duration-1000"
+                style={{
+                  backgroundImage: `url('${src}')`,
+                  backgroundSize: "cover",
+                  backgroundPosition: "center",
+                  opacity: index === currentImageIndex ? 1 : 0,
+                }}
+              />
+            ))}
+          </>
         )}
 
-        {/* Image de secours (toujours présente, masquée si l'iframe est chargé) */}
-        <div
-          className={`absolute inset-0 w-full h-full bg-cover bg-center transition-opacity duration-500 ${
-            !isLoading && isMounted ? "opacity-0" : "opacity-100"
-          }`}
-          style={{ backgroundImage: "url('/images/hero-garden.png')" }}
-        />
+        {/* Image de secours pendant le chargement */}
+        {isLoading && (
+          <div
+            className="absolute inset-0 w-full h-full bg-cover bg-center"
+            style={{ backgroundImage: "url('/images/hero-garden.png')" }}
+          />
+        )}
       </div>
 
       {/* Overlay sombre pour améliorer la lisibilité du texte */}
