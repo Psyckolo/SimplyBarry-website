@@ -100,15 +100,15 @@ export default function Footer() {
             <ul className="space-y-2">
               <li className="flex items-start">
                 <i className="fas fa-map-marker-alt mt-1 mr-2 text-accent"></i>
-                <span className="text-gray-700">Belgique</span>
+                <span className="text-gray-700">Rue Hanigale 26, 1480 Tubize, Belgique</span>
               </li>
               <li className="flex items-start">
                 <i className="fas fa-phone-alt mt-1 mr-2 text-accent"></i>
-                <span className="text-gray-700">+32 XX XX XX XX</span>
+                <span className="text-gray-700">+32 472 07 51 63</span>
               </li>
               <li className="flex items-start">
                 <i className="fas fa-envelope mt-1 mr-2 text-accent"></i>
-                <span className="text-gray-700">contact@simplybarry.be</span>
+                <span className="text-gray-700">simplybarryg@gmail.com</span>
               </li>
               <li className="flex items-start">
                 <i className="fas fa-clock mt-1 mr-2 text-accent"></i>

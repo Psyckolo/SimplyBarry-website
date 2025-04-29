@@ -222,7 +222,7 @@ export default function ContactSection() {
                   </div>
                   <div>
                     <h4 className="font-medium text-lg mb-1">Adresse</h4>
-                    <p className="text-gray-600">Belgique</p>
+                    <p className="text-gray-600">Rue Hanigale 26, 1480 Tubize, Belgique</p>
                   </div>
                 </div>
 
@@ -233,9 +233,11 @@ export default function ContactSection() {
                   <div>
                     <h4 className="font-medium text-lg mb-1">Téléphone</h4>
                     <p className="text-gray-600">
-                      +32 XX XX XX XX
+                      <a href="tel:+32472075163" className="hover:text-primary transition-colors">
+                        +32 472 07 51 63
+                      </a>
                       <br />
-                      +32 XX XX XX XX (urgences)
+                      <span className="text-sm">(Disponible en semaine de 8h à 18h)</span>
                     </p>
                   </div>
                 </div>
@@ -247,9 +249,9 @@ export default function ContactSection() {
                   <div>
                     <h4 className="font-medium text-lg mb-1">Email</h4>
                     <p className="text-gray-600">
-                      contact@simplybarry.be
-                      <br />
-                      devis@simplybarry.be
+                      <a href="mailto:simplybarryg@gmail.com" className="hover:text-primary transition-colors">
+                        simplybarryg@gmail.com
+                      </a>
                     </p>
                   </div>
                 </div>

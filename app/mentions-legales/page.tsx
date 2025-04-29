@@ -10,7 +10,7 @@ export default function MentionsLegales() {
         <p className="mb-6">
           Simply Barry est une entreprise d'entretien de jardins basée en Belgique.
           <br />
-          Siège social : 15 Rue des Jardins, 1000 Bruxelles, Belgique
+          Siège social : Rue Hanigale 26, 1480 Tubize, Belgique
           <br />
           Numéro d'entreprise : BE0123456789
           <br />

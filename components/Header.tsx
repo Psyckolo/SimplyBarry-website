@@ -120,8 +120,8 @@ export default function Header() {
 
         {/* Numéro de téléphone - caché sur mobile quand le menu est ouvert */}
         <div className={`contact-header lg:block ${isMenuOpen ? "hidden" : "block"}`}>
-          <a href="tel:+32XXXXXXXXX" className="text-primary font-bold text-base sm:text-lg">
-            +32 XX XX XX XX
+          <a href="tel:+32472075163" className="text-primary font-bold text-base sm:text-lg">
+            +32 472 07 51 63
           </a>
         </div>
       </div>
