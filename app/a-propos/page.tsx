@@ -1,8 +1,9 @@
 import Image from "next/image"
+import PageLayout from "@/components/PageLayout"
 
 export default function APropos() {
   return (
-    <div className="container py-12 sm:py-16 md:py-20 px-4 sm:px-6 lg:px-8">
+    <PageLayout>
       <h1 className="text-center mb-8 sm:mb-10">À propos de Simply Barry</h1>
 
       <div className="flex flex-col md:flex-row gap-8 md:gap-10">
@@ -55,6 +56,6 @@ export default function APropos() {
           </div>
         </div>
       </div>
-    </div>
+    </PageLayout>
   )
 }

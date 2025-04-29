@@ -1,9 +1,11 @@
+import PageLayout from "@/components/PageLayout"
+
 export default function PolitiqueConfidentialite() {
   return (
-    <div className="container py-12 sm:py-16 md:py-20 px-4 sm:px-6 lg:px-8">
+    <PageLayout>
       <h1 className="text-center mb-8">Politique de Confidentialité</h1>
 
-      <div className="max-w-3xl mx-auto bg-white p-6 sm:p-8 rounded shadow-custom">
+      <div className="max-w-3xl mx-auto">
         <h2 className="text-xl sm:text-2xl text-left mb-4">Collecte des données personnelles</h2>
         <p className="mb-6">
           Simply Barry collecte des données personnelles lorsque vous utilisez notre formulaire de contact ou de demande
@@ -37,6 +39,6 @@ export default function PolitiqueConfidentialite() {
           entreront en vigueur dès leur publication sur ce site.
         </p>
       </div>
-    </div>
+    </PageLayout>
   )
 }

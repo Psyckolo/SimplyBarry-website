@@ -1,9 +1,11 @@
+import PageLayout from "@/components/PageLayout"
+
 export default function MentionsLegales() {
   return (
-    <div className="container py-12 sm:py-16 md:py-20 px-4 sm:px-6 lg:px-8">
+    <PageLayout>
       <h1 className="text-center mb-8">Mentions Légales</h1>
 
-      <div className="max-w-3xl mx-auto bg-white p-6 sm:p-8 rounded shadow-custom">
+      <div className="max-w-3xl mx-auto">
         <h2 className="text-xl sm:text-2xl text-left mb-4">Informations légales</h2>
         <p className="mb-6">
           Simply Barry est une entreprise d'entretien de jardins basée en Belgique.
@@ -43,6 +45,6 @@ export default function MentionsLegales() {
           États-Unis
         </p>
       </div>
-    </div>
+    </PageLayout>
   )
 }

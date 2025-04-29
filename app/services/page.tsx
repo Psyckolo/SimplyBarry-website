@@ -1,4 +1,5 @@
 import Image from "next/image"
+import PageLayout from "@/components/PageLayout"
 
 const services = [
   {
@@ -41,7 +42,7 @@ const services = [
 
 export default function Services() {
   return (
-    <div className="container py-12 sm:py-16 md:py-20 px-4 sm:px-6 lg:px-8">
+    <PageLayout>
       <h1 className="text-center mb-4 sm:mb-6">Nos Services</h1>
       <p className="text-center mb-8 sm:mb-10 max-w-2xl mx-auto">
         Découvrez notre gamme complète de services d'entretien de jardins en Belgique.
@@ -77,6 +78,6 @@ export default function Services() {
           </div>
         ))}
       </div>
-    </div>
+    </PageLayout>
   )
 }

@@ -1,4 +1,5 @@
 import Image from "next/image"
+import PageLayout from "@/components/PageLayout"
 
 const realisations = [
   {
@@ -26,7 +27,7 @@ const realisations = [
 
 export default function Realisations() {
   return (
-    <div className="container py-12 sm:py-16 md:py-20 px-4 sm:px-6 lg:px-8">
+    <PageLayout>
       <h1 className="text-center mb-4 sm:mb-6">Nos Réalisations</h1>
       <p className="text-center mb-8 sm:mb-10 max-w-2xl mx-auto">
         Découvrez quelques-uns de nos projets récents d'entretien et d'aménagement de jardins en Belgique.
@@ -50,6 +51,6 @@ export default function Realisations() {
           </div>
         ))}
       </div>
-    </div>
+    </PageLayout>
   )
 }

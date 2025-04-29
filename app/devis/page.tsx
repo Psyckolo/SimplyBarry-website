@@ -1,6 +1,8 @@
+import PageLayout from "@/components/PageLayout"
+
 export default function Devis() {
   return (
-    <div className="container py-12 sm:py-16 md:py-20 px-4 sm:px-6 lg:px-8">
+    <PageLayout>
       <h1 className="text-center mb-4 sm:mb-6">Demande de devis</h1>
       <p className="text-center mb-8 sm:mb-10 max-w-2xl mx-auto">
         Remplissez le formulaire ci-dessous pour recevoir un devis gratuit et sans engagement.
@@ -76,6 +78,6 @@ export default function Devis() {
           Envoyer ma demande
         </button>
       </form>
-    </div>
+    </PageLayout>
   )
 }
