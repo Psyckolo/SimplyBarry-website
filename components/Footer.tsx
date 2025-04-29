@@ -7,7 +7,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
           <div>
             <div className="mb-4">
-              <Image src="/logo.png" alt="Simply Barry" width={180} height={60} className="h-14 w-auto" />
+              <Image src="/logo.jpg" alt="Simply Barry" width={180} height={180} className="h-14 w-auto" />
             </div>
             <p className="mb-4 text-gray-300">
               Services professionnels d'entretien de jardin pour particuliers et entreprises en Belgique.

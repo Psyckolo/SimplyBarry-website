@@ -30,7 +30,7 @@ export default function Header() {
     >
       <div className="container mx-auto px-4 flex flex-wrap justify-between items-center">
         <Link href="/" className="logo transition-transform duration-300 hover:scale-105 z-20">
-          <Image src="/logo.png" alt="Simply Barry" width={180} height={60} className="h-12 sm:h-14 md:h-16 w-auto" />
+          <Image src="/logo.jpg" alt="Simply Barry" width={180} height={180} className="h-12 sm:h-14 md:h-16 w-auto" />
         </Link>
 
         {/* Bouton menu hamburger - visible uniquement sur mobile */}
